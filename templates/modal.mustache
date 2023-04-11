@@ -1,0 +1,67 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template tiny_chemistry/modal
+
+    Modal to manage an Chemistry within the Tiny Editor.
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
+
+    Context variables required for this template:
+
+    Example context (json):
+    {
+        "elementid": "exampleId",
+        "texdocsurl": "http://abc.com",
+        "chemistry": "\\Downarrow ",
+        "delimiters": {
+            "start": "",
+            "end": ""
+        },
+        "libraries": {
+            "group1": [
+                "\\Downarrow "
+            ]
+        }
+    }
+}}
+{{< core/modal }}
+
+    {{$title}}
+        {{#str}} modaltitle, tiny_chemistry {{/str}}
+    {{/title}}
+
+    {{$body}}
+        <form class="mform" id="{{uniqid}}">
+            {{> tiny_chemistry/modal_library }}
+            <label for="{{elementid}}_tiny_chemistry_chemistry">{{#str}} editchemistry, tiny_chemistry, {{texdocsurl}} {{/str}}</label>
+            <textarea class="fullwidth text-ltr tiny_chemistry_chemistry w-100" id="{{elementid}}_tiny_chemistry_chemistry" rows="8">{{chemistry}}</textarea>
+            <label for="{{elementid}}_tiny_chemistry_preview">{{#str}} preview, tiny_chemistry {{/str}}</label>
+            <div aria-describedby="{{elementid}}_cursorinfo" class="border rounded bg-light p-1 fullwidth tiny_chemistry_preview" id="{{elementid}}__tiny_chemistry_preview"></div>
+            <div id="{{elementid}}_cursorinfo">{{#str}} cursorinfo, tiny_chemistry {{/str}}</div>
+        </form>
+    {{/body}}
+
+    {{$footer}}
+        <button type="button" class="btn btn-primary" data-action="save">{{#str}} savechemistry, tiny_chemistry{{/str}}</button>
+    {{/footer}}
+
+{{/ core/modal }}
