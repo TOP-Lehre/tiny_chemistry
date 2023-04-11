@@ -1,5 +1,5 @@
 # tiny_chemistry
-Chemistry equation editor for Tiny Editor in Moodle (Version 4.0 and above) using the mhchem extension in MathJax/TeX. This plugin is based on equation editor (original by Huong Nguyen <huongnv13@gmail.com>) and was modified by TOP Lehre FH OOE, Campus Hagenberg (elearning@fh-hagenberg.at) for chemistry formulas.
+Chemistry equation editor for Tiny Editor in Moodle (Version 4.1 and above) using the mhchem extension in MathJax/TeX. This plugin is based on equation editor (original by Huong Nguyen <huongnv13@gmail.com>) and was modified by TOP Lehre FH OOE, Campus Hagenberg (elearning@fh-hagenberg.at) for chemistry formulas.
 
 ## Version info
 
